@@ -1,7 +1,5 @@
-from classes.my_classes import Car
-my_car = Car("Toyota", "Camry", 2020, 15000, "Good", "Blue")
+from classes.my_classes import Person
+self = Person("Rickey", "Cornett", 30, "Male", 5.10)
 
-my_car.start()
-my_car.accelerate(20)
-my_car.accelerate(30)
-my_car.stop()
+self.sitting()
+self.standing()
