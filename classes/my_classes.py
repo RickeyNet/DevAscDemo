@@ -1,36 +1,29 @@
-class Car:
-    def __init__(self, make: str, model: str, year: int, mileage: int, condition: str, color: str, ) -> None:
-        self.make = make
-        self.model = model
-        self.year = year
-        self.mileage = mileage
-        self.condition = condition
-        self.color = color
-        self.running = False
-        self.speed = 0
+class Person:
+    def __init__(self, first_name: str, last_name: str, age: int, gender: str) -> None:
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.gender = gender
+        self.race = race
+        self.standing = False
+        
 
-    def start(self) -> None:
-        if self.running:
-            print(f"The {self.make} {self.model} is already running.")
+    def standing(self) -> None:
+        if self.standing:
+            print(f"{self.first_name} {self.last_name} is already standing.")
             return
         else:
-            self.running = True
-            print(f"The {self.make} {self.model} has started.")
-    def stop(self) -> None:
-        if not self.running:
-            print(f"The {self.make} {self.model} is already stopped.")
-            return
-        else:
-            self.running = False
-            self.speed = 0
-            print(f"The {self.make} {self.model} has stopped.")
+            self.standing = True
+            print(f"{self.first_name} {self.last_name} has stood up.")
 
-    def accelerate(self, increase: int) -> None:
-        if not self.running:
-            print(f"The {self.make} {self.model} is not running. Please start the car first.")
+    def sitting(self) -> None:
+        if not self.standing:
+            print(f"{self.first_name} {self.last_name} is already sitting.")
             return
         else:
-            self.speed += increase
-            print(f"The {self.make} {self.model} is now going {self.speed} mph.")
+            self.standing = False
+            print(f"{self.first_name} {self.last_name} has sat down.")
+
+   
     
     
